@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta charset="utf-8"/>
+     <title>AttribuCookie1</title>
+    </head>
+    <body>
+       <input type="button" value="setCookie" onclick="setCookie()"/>
+       <input type="button" value="GetCookie" onclick="getCookie()"/>
+        <script type="text/javaScript">
+            function setCookie() {
+                document.cookie = "coleur=green;max-age="+24*60*60*1000+";path=/"
+            }
+
+            function getCookie() {
+                let myElement ="";
+                if(document.cookie.length!=0)
+                {
+                    let myCookie = document.cookie.split("=")
+                     
+                     console.log("nom: "+myCookie[0]+" valeur :"+myCookie[1])
+
+                }else 
+                {
+                    console.log("cookie n'esxiste pas")
+                }
+            }
+        </script>
+
+    </body>
+</html>

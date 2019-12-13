@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>To DO</title>
+        <link  rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+        <link href="./css/style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javaScript" src="./js/jquery.js"></script>
+        <script defer type="text/javaScript" src="./js/ArrayStorage.js"></script>
+        <script defer type="text/javaScript" src="./js/index.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>To Do Liste</h2>
+             <div class="row">
+              <form class="form-inline">
+                 <input type="text" placeholder="Nouvelle tâche" id="input" class="form-control"/>
+                  <input type="button" value="Add" id="add" class="btn btn-outline-primary"/>
+                 <input type="button" value="CLEAR" id="clear" class="btn btn-outline-secondary"/>
+                 <input type="text" placeholder="Tableau format Json" id="url" class="form-control"/>
+                  <button class="btn btn-outline-primary" disabled>
+                    <span class="spinner-border spinner-border-sm"></span>
+                    Loading..
+                  </button>
+                </form>
+                 </div>
+                    <ul id='list'>
+    
+                    </ul>
+                </div>
+        </div>
+    </body>
+</html>

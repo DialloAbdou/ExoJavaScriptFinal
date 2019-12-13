@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Formulaire</title>
+        <link rel="stylesheet"  type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+         <link rel="stylesheet"  type="text/css" href="node_modules/bootstrap/dist/js/bootstrap.min.js"/> -->
+
+        <style>
+            .row
+            {
+                margin-bottom: 15px;
+            }
+            .formulaire
+            {
+                border: solid #BFBDBD 1px; 
+                border-radius:3px; 
+                margin-top: 10px;
+                padding-bottom: 5px;
+            }
+            .formulaire h2{
+                text-align: center;
+            }
+           .formulaire input[type=text] {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-4 formulaire">
+                    <h2>Création d'un Compte</h2>
+                    <div id="divErreur"></div>
+                    <form class="form">
+                            <div class="form-group">
+                               <label for="nom">Nom:</label>
+                                 <input type="text" id="nom" name="nom"/>
+                             </div>
+                             <div class="form-group">
+                                 <label for="prenom">Prénom:</label>
+                                 <input type="text" id="prenom" name="prenom"/>
+                             </div>
+                             <div class="form-group">
+                                    <label for="adresse">Numéros:</label> 
+                                    <input type="text" id="numero" name="numero"/>
+                            </div>
+                            <div class="form-group">
+                                 <label for="adresse">Adresse:</label>
+                                 <input type="text" id="adresse" name="adresse"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="ville">Ville:</label>
+                                 <input type="text" id="ville" name="ville"/>
+                             </div>
+
+                             <div class="form-group">
+                                    <label for="nom">Code Postal</label>
+                                    <input type="text" id="cp" name="cp"/>
+                             </div>
+
+                             <div class="form-group">
+                                 <label for="email">Email:</label>
+                                 <input type="text" id="email" name="email"/>
+                             </div>
+                             <div class="form-group">
+                                 <label for="tel">Telephoe:</label>
+                                 <input type="text" id="tel" name="tel"/>
+                              </div>
+                            <div class="form-group">
+                              <div class="col-md-offset-2 col-md-10">
+                                 <input type="submit" value="Save" class="btn btn-primary" />
+                              </div>
+                             </div>
+                    </form>
+                 
+                </div>
+            </div>
+            </div>
+        </div>
+        <script src="Exo10.js"></script>
+         <script src="Exo10Ctrle.js"></script>
+
+    </body>
+</html>

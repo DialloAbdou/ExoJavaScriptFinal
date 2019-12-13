@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<title>Apprendre jQuery</title>
+</head>
+<body>
+
+	<div id="wrap">
+
+	<h1>Apprendre jQuery</h1>
+	
+	<h2>Du texte</h2>
+
+	<p>Ceci est un paragraphe <code>&lt;p&gt;</code> avec <a href="#">un lien</a>.</p>
+
+	<div id="mondiv">Ici un élément <code>&lt;div&gt;</code> avec un identifiant <code>#mondiv</code></div>
+
+	<p class="p1">Ceci est le premier Paragraphe<code>&lt;p&gt;</code> avec <span>un span</span> et <span>un autre span</span> ainsi qu'un élément <strong>strong</strong> et un élément <em>em</em>.</p>
+	
+	<p class="p2">Ceci est un autre paragraphe <code>&lt;p&gt;</code> avec <span>un span</span> et <span>un autre span</span> ainsi qu'un élément <strong>strong</strong> et un élément <em>em</em>.</p>
+	
+	<p style="display:none">Un paragraphe initialement caché !</p>
+
+	<h2>Quelques images</h2>
+
+	<div id="images" class="elementImages">
+		<img src="images/banane.jpg" id="banane" alt="Deux bananes" title="Deux bananes jaunes" />
+		<img src="images/fraise.jpg" id="fraise" alt="Une fraise rouge" title="Une jolie fraise" />
+		<img src="images/kiwi.jpg" id="kiwi" alt="Des tranches de kiwi" />
+		<img src="images/tomate.jpg" id="tomate" alt="Une tomate rouge" title="Une tomate rouge" />
+	</div>
+
+	<h2>Une liste</h2>
+
+	<ul class="maliste">
+		<li class="kiwi">Les kiwis
+			<ul>
+				<li>sont source de <a href="http://fr.wikipedia.org/wiki/Vitamine_C">Vitamine C</a></li>
+				<li>sont originaires de Chine</li>
+				<li>se dégustent en dessert</li>
+			</ul>
+		</li>
+		<li class="fuitLegume">Les autres fruits et légumes
+			<ul class="ulFruitLegume" data-id="les legumes">
+				<li class="fruit">Raisin</li>
+				<li class="legume">Carotte</li>
+				<li class="fruit">Pomme</li>
+				<li class="legume">Haricot</li>
+				<li class="fruit">Mangue</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h2>Un tableau</h2>
+
+	<table>
+		<thead>
+		<tr>
+
+		<th>Aliment</th>
+		<th>Type</th>
+		<th>Provenance</th>
+		</tr>
+		</thead>
+
+		<tbody>
+		<tr>
+		<td>Parmesan</td>
+		<td>Fromage</td>
+		<td>Italie</td>
+		</tr>
+
+		<tr>
+		<td>Choucroute</td>
+		<td>Repas complet</td>
+		<td>Alsace</td>
+		</tr>
+
+		<tr>
+		<td>Moussaka</td>
+		<td>Plat</td>
+		<td>Grèce</td>
+		</tr>
+
+		<tr>
+		<td>Waterzooi</td>
+		<td></td>
+		<td>Belgique</td>
+		</tr>
+		</tbody>
+	
+	</table>
+	
+	<h2>Un formulaire</h2>
+
+	<form action="" method="post" id="myFormId">
+
+		<div>
+			<label for="nom">Nom :</label> <input type="text" id="nom" name="nom" />
+		</div>
+		
+		<div>
+			<label for="prenom">Prénom :</label> <input type="text" id="prenom" name="prenom" />
+		</div>
+		<p> Le dernier caractère saisie : <span class="assci"></span></p>
+
+		<div>
+			<label>Êtes-vous :</label>
+			<input type="radio" name="sexe" id="radioH" value="H" /> Un homme
+			<input type="radio" name="sexe" id="radioF" value="F" /> Une femme
+		</div>
+
+		<div>
+			<label>Votre âge :</label>
+			<input type="checkbox" name="check" id="checkbox1" value="1" /> -20
+			<input type="checkbox" name="check" id="checkbox2" value="2" checked="checked" /> 20-30
+			<input type="checkbox" name="check" id="checkbox3" value="3" /> 30-40
+			<input type="checkbox" name="check" id="checkbox4" value="4" disabled="disabled" /> +40
+		</div>
+		
+		<div>
+			<label>Pays :</label>
+			<select name="choix" id="choix">
+				<option value="France">France</option>
+				<option value="Belgique">Belgique</option>
+				<option value="Suisse">Suisse</option>
+				<option value="Luxembourg">Luxembourg</option>
+			</select>
+		</div>
+		
+		<div id="resultat"></div>
+
+		<div><input type="submit" value="Valider" id="bouton" /></div>
+
+	</form>
+
+	</div> <!-- fin de #wrap -->
+
+
+ 	<!--	$(document).ready(function()
+ 		{
+ 			 //$("img").dblclick(function(){
+ 			 //$(this).addClass("highlight2");
+ 			// });
+ 			alert("click1");
+ 			$("img").bind("Click",function(){
+ 				console.log("click1"); 
+ 			})
+
+ 		});-->
+
+ <!--<script type="text/javascript" src="jquery-3.4.1.min.js"></script>-->
+ <script type="text/javascript">
+     const listFruit = document.querySelector(".ulFruitLegume");
+     //creation de nouveau element
+    const li = document.createElement('li');
+    li.textContent="Nouveau fruit";
+    listFruit.appendChild(li)
+    const dernierElmt = listFruit.lastElementChild;
+    listFruit.removeChild(dernierElmt)
+ </script>
+
+
+</body>
+</html>

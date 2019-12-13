@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>La petite calculatrice </title>
+        <link rel="stylesheet"  type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+        
+    </head>
+    <body>
+        <div class="container border border-dark rounded-lg">
+        
+             <h2 class="text-center bg-dark rounded-lg text-white p-2 m-2">Calculatrice</h2>
+             <div class="form-group">
+                <input type="text" class="form-control text-center" id="resultat" disabled/>
+             </div>
+             <div id="touche">
+
+                 <div class="row">
+                    <button id ="c7" class="col btn btn-primary m-2">7</button>
+                    <button id ="c8" class="col btn btn-primary m-2">8</button>
+                    <button id ="c9" class="col btn btn-primary m-2">9</button>
+                    <button id ="bdiv" class="col btn btn-info m-2">/</button>
+                 </div>
+                 <div class="row">
+                        <button id ="c4" class="col btn btn-primary m-2">4</button>
+                        <button id ="c5" class="col btn btn-primary m-2">5</button>
+                        <button id ="c6" class="col btn btn-primary m-2">6</button>
+                        <button id ="bMul" class="col btn btn-info m-2">*</button>
+                 </div>
+                 <div class="row">
+                        <button id ="c1" class="col btn btn-primary m-2">1</button>
+                        <button id ="c2" class="col btn btn-primary m-2">2</button>
+                        <button id ="c3" class="col btn btn-primary m-2">3</button>
+                        <button id ="bMin" class="col btn btn-info m-2">-</button>
+                 </div>
+                 <div class="row">
+                        <button id ="point" class="col btn btn-primary m-2">.</button>
+                        <button id ="c0" class="col btn btn-primary m-2">0</button>
+                        <button id ="Egal" class="col btn btn-success m-2">=</button>
+                        <button id ="bPlus" class="col btn btn-info m-2">+</button>
+                 </div>
+             </div>
+             <div class="row">
+                 <h2>Opération :</h2>
+                 <div id="recap" class="text-right bg-warning m-2 p-2 rounded-lg overflow-auto" style="font-size:10px;height:100px; width:500px;"></div>
+             </div>
+             <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+             <script type="text/javascript"src="./js/calculatrice.js"></script>
+    </body>
+</html>

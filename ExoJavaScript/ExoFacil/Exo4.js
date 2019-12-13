@@ -1,0 +1,8 @@
+var read = require("readline-sync")
+var nom = read.question("quel est votre nom ?")
+var prenom = read.question("quel est votre prenom ?")
+var age =parseInt(read.question("quel est votre age ?"))
+console.log("-----------BIENVENUE----------")
+console.log("Votre nom est:%s",nom)
+console.log("Votre prenom est :%s",prenom)
+console.log("Vous avez %d ans",age)

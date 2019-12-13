@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<htm>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Liste des couleurs</title>
+    </head>
+    <body>
+        <h2>Liste des Couleurs !</h2>
+  
+             <select id="div_Select" name="color" onchange="setColorCookie()">
+                <option value="selectColor"> Select Color</option>
+                <option value="Red">Red</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Green"> Select Color</option>
+                <option value="Blue">Blue</option>
+             </select>
+
+         <script type="text/javaScript"> 
+
+                window.onload = function() {
+            
+                    if( document.cookie.length!=0)
+                    {
+                        let myCookie = document.cookie.split("=");
+                        document.querySelector("#div_Select").value = myCookie[1];
+                        document.body.style.backgroundColor =myCookie[1]
+                    }
+                }
+                function setColorCookie() {
+
+                    let  myselectColor = document.querySelector("#div_Select").value;
+                        if(myselectColor!="selectColor") 
+                        {
+
+                             document.body.style.backgroundColor =myselectColor
+                            document.cookie = 'couleur='+myselectColor+';expires=Sun, 29 Feb 2020 00:00:00 UTC; path=/'
+                        }
+                }
+         </script>
+    </body>
+</htm>
